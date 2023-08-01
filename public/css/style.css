@@ -32,7 +32,7 @@ body {
   font-weight: 300;
   font-family: 'Lato', sans-serif;
   color: #777;
-  padding: 3rem;
+  /* padding: 3rem; */
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -122,6 +122,7 @@ body {
     to(#28b487)
   );
   background-image: linear-gradient(to right, #7dd56f, #28b487);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.1rem;
@@ -1222,7 +1223,8 @@ body {
   margin: 0 auto;
 }
 
-.login-form {
+.login-form,
+.signup-form {
   margin: 0 auto;
   max-width: 55rem;
   background-color: #fff;
@@ -1322,4 +1324,143 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
+}
+
+.reviews::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.reviews::-webkit-scrollbar-thumb {
+  background: #f7f7f7;
+  border-radius: 10px;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 767px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 0 20px;
+    flex-direction: row !important;
+    align-items: center;
+  }
+
+  .header__logo {
+    margin: 0;
+  }
+
+  .nav--tours {
+    display: none;
+  }
+
+  .nav--user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: auto;
+    gap: 10px;
+  }
+
+  .nav--user a {
+    margin: 0 !important;
+  }
+
+  .main {
+    padding: 60px 20px;
+  }
+
+  .card-container {
+    max-width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+
+  .login-form,
+  .signup-form {
+    padding: 60px 30px;
+  }
+
+  .alert {
+    font-size: 14px;
+    padding: 24px 16px;
+    width: 90%;
+  }
+
+  .user-view {
+    flex-direction: column;
+  }
+
+  .user-view__content {
+    padding: 60px 30px;
+  }
+
+  .user-view__form-container {
+    padding: 0;
+  }
+
+  .section-header {
+    height: 400px;
+  }
+
+  .heading-box {
+    width: 100%;
+    padding: 0 20px;
+    top: 40%;
+  }
+
+  .heading-primary {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .section-description {
+    flex-direction: column;
+  }
+
+  .overview-box {
+    padding: 80px 20px 60px 20px;
+    justify-content: flex-start;
+  }
+
+  .description-box {
+    padding: 60px 20px 80px 20px;
+  }
+
+  .section-pictures {
+    flex-direction: column;
+  }
+
+  .picture-box__img--1,
+  .picture-box__img--2,
+  .picture-box__img--3 {
+    padding: 0;
+  }
+
+  .reviews {
+    grid-column-gap: 30px;
+  }
+
+  .reviews:before,
+  .reviews:after {
+    width: 0;
+  }
+
+  .section-cta {
+    padding: 120px 20px 60px 20px;
+  }
+
+  .cta {
+    padding: 30px;
+  }
+
+  .cta__img {
+    display: none;
+  }
+
+  .cta__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
 }
